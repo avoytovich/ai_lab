@@ -1,35 +1,38 @@
-# Copilot instructions for ai_lab
+# AGENTS.md
 
-The instructions in this file apply to any AI coding agent working with this repository, including Claude Code, Gemini, Copilot, and similar tools.
+This file provides guidance to AI coding agents working with this repository.
 
 ## Commands
 
-- Install: npm install
-- Dev server: npm run dev
-- Build: npm run build
-- Lint: npm run lint
-- Tests: [none yet, added in Phase 2]
+- Install dependencies: `npm install`
+- Run development server: `npm run dev`
+- Run tests: `npm test`
+- Run linting: `npm run lint`
 
 ## Architecture
 
-- React + TypeScript app created with Vite; all code lives in src/.
-- [Where components live]
-- [How state or data fetching is handled]
+- React frontend in `src/`
+- API clients in `src/api`
+- State management in `src/store`
+- Components should be presentational when possible
 
 ## Conventions
 
-- TypeScript strict mode; function components with hooks.
-- [Naming and file structure you want]
+- TypeScript strict mode enabled
+- Prefer functional components
+- Use named exports
+- Follow ESLint rules
 
-## Never touch
+## Never Touch
 
-- .env files, .github/workflows/, package-lock.json (never edit by hand).
-- vite.config.ts and tsconfig files unless I ask.
+- `src/generated/*`
+- Migration files
+- Environment secrets
+- CI/CD configuration
 
 ## Rules for the AI
 
-1. Plan first: describe the plan and wait for my approval before editing files.
-2. One task per change, under about 200 changed lines.
-3. Never add a dependency, or use --force or --legacy-peer-deps, without asking.
-4. Run lint and build before saying a task is done, and show me the output.
-5. If something is unclear, ask instead of guessing.
+- Always run lint before proposing changes
+- Prefer updating existing files over creating new ones
+- Do not introduce new dependencies without justification
+- Preserve public APIs unless explicitly asked
