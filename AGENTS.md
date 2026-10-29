@@ -29,10 +29,13 @@ This file provides guidance to AI coding agents working with this repository.
 - Migration files
 - Environment secrets
 - CI/CD configuration
+- .env files, .github/workflows/, package-lock.json (never edit by hand).
+- vite.config.ts and tsconfig files unless I ask.
 
 ## Rules for the AI
 
-- Always run lint before proposing changes
-- Prefer updating existing files over creating new ones
-- Do not introduce new dependencies without justification
-- Preserve public APIs unless explicitly asked
+1. Plan first: describe the plan and wait for my approval before editing files.
+2. One task per change, under about 200 changed lines.
+3. Never add a dependency, or use --force or --legacy-peer-deps, without asking.
+4. Run lint and build before saying a task is done, and show me the output.
+5. If something is unclear, ask instead of guessing.
