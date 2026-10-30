@@ -4,33 +4,33 @@ This file provides guidance to AI coding agents working with this repository.
 
 ## Commands
 
-- Install dependencies: `npm install`
-- Run development server: `npm run dev`
-- Run tests: `npm test`
-- Run linting: `npm run lint`
+- Install: `npm install`
+- Dev server: `npm run dev`
+- Build: `npm run build`
+- Lint: `npm run lint`
+- Tests: none yet (added in Phase 2)
 
 ## Architecture
 
-- React frontend in `src/`
-- API clients in `src/api`
-- State management in `src/store`
-- Components should be presentational when possible
+- React + TypeScript app created with Vite. All code is in `src/`.
+- Entry point: `src/main.tsx`, which renders `App` from `src/App.tsx`.
+- Styles: plain CSS in `src/index.css` (global) and `src/App.css`.
+- Static assets: `src/assets/`.
+- Do not create new top-level folders in `src/` (such as `api`, `store` or `components`) without asking. Propose the structure in the plan first.
 
 ## Conventions
 
 - TypeScript strict mode enabled
-- Prefer functional components
-- Use named exports
+- Prefer functional components with hooks
+- Use named exports in new code; leave existing default exports alone
 - Follow ESLint rules
 
 ## Never Touch
 
-- `src/generated/*`
-- Migration files
-- Environment secrets
-- CI/CD configuration
-- .env files, .github/workflows/, package-lock.json (never edit by hand).
-- vite.config.ts and tsconfig files unless I ask.
+- `.env` files and anything that holds secrets
+- `.github/workflows/`
+- `package-lock.json` (never edit by hand)
+- `vite.config.ts` and tsconfig files unless I ask
 
 ## Rules for the AI
 
